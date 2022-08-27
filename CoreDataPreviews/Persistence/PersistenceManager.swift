@@ -9,11 +9,15 @@ import Foundation
 import CoreData
 
 final class PersistenceManager: ObservableObject {
-    static let shared = PersistenceManager()
     let container: NSPersistentContainer
     
-    init() {
+    init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "CoreDataPreviews")
+        
+        // Use memory as a storage
+        if inMemory {
+            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        }
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -22,12 +26,14 @@ final class PersistenceManager: ObservableObject {
         })
     }
     
-    func saveList(with name: String) {
+    @discardableResult
+    func saveList(with name: String) -> ShoppingList {
         let list = ShoppingList(context: container.viewContext)
         list.name = name
         
         // Skip error handling for the sake of simplicity.
         try? container.viewContext.save()
+        return list
     }
     
     func retrieveList() -> [ShoppingList] {
@@ -46,7 +52,22 @@ final class PersistenceManager: ObservableObject {
         item.amount = Int16(amount)
         
         list.addToItems(item)
+        
         // Skip error handling for the sake of simplicity.
         try? container.viewContext.save()
     }
+}
+
+extension PersistenceManager {
+    static var preview: PersistenceManager = {
+        let manager = PersistenceManager(inMemory: true)
+        let list1 = manager.saveList(with: "Preview list 1")
+        let list2 = manager.saveList(with: "Preview list 2")
+        
+        manager.saveItem(name: "Preview item 1", amount: 1, for: list1)
+        manager.saveItem(name: "Preview item 2", amount: 5, for: list1)
+        manager.saveItem(name: "Preview item 3", amount: 2, for: list2)
+        manager.saveItem(name: "Preview item 4", amount: 5, for: list2)
+        return manager
+    }()
 }

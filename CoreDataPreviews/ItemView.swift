@@ -24,10 +24,7 @@ struct ItemView: View {
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        let item1 = ShoppingListItem(context: PersistenceManager.shared.container.viewContext)
-        item1.name = "Item 1"
-        item1.amount = 1
-        
-        return ItemView(item: item1)
+        let mockData = EntityMockDataProvider.mockData(for: ShoppingListItem.self)
+        return ItemView(item: mockData)
     }
 }

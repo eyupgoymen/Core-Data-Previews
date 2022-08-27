@@ -57,6 +57,6 @@ struct ShoppingListView: View {
 struct ShoppingListView_Previews: PreviewProvider {
     static var previews: some View {
         ShoppingListView()
-            .environmentObject(PersistenceManager.shared)
+            .environmentObject(PersistenceManager.preview)
     }
 }

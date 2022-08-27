@@ -44,17 +44,9 @@ struct ShoppingListItemsView: View {
 
 struct ShoppingListItemsView_Previews: PreviewProvider {
     static var previews: some View {
-        let shoppingList = ShoppingList(context: PersistenceManager.shared.container.viewContext)
-        let item1 = ShoppingListItem(context: PersistenceManager.shared.container.viewContext)
-        let item2 = ShoppingListItem(context: PersistenceManager.shared.container.viewContext)
-        item1.name = "Item 1"
-        item2.name = "Item 2"
-        item1.amount = 1
-        item2.amount = 2
-        shoppingList.items = [item1, item2]
+        let mockList = EntityMockDataProvider.mockData(for: ShoppingList.self)
         
-        
-        return ShoppingListItemsView(shoppingList: shoppingList)
-            .environmentObject(PersistenceManager.shared)
+        return ShoppingListItemsView(shoppingList: mockList)
+            .environmentObject(PersistenceManager.preview)
     }
 }

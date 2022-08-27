@@ -15,6 +15,7 @@
 		6F2424AF28B90FDB00AADD4E /* ShoppingListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2424AB28B90FDB00AADD4E /* ShoppingListItem+CoreDataProperties.swift */; };
 		6F2424B128B93D3D00AADD4E /* ShoppingListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2424B028B93D3D00AADD4E /* ShoppingListItemsView.swift */; };
 		6F2424B328BA019600AADD4E /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2424B228BA019600AADD4E /* ItemView.swift */; };
+		6F2424B728BA3B0100AADD4E /* EntityMockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2424B628BA3B0100AADD4E /* EntityMockDataProvider.swift */; };
 		6F79C90928B77EDB001691EF /* CoreDataPreviewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F79C90828B77EDB001691EF /* CoreDataPreviewsApp.swift */; };
 		6F79C90D28B77EDB001691EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F79C90C28B77EDB001691EF /* Assets.xcassets */; };
 		6F79C91028B77EDB001691EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F79C90F28B77EDB001691EF /* Preview Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		6F2424AB28B90FDB00AADD4E /* ShoppingListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6F2424B028B93D3D00AADD4E /* ShoppingListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemsView.swift; sourceTree = "<group>"; };
 		6F2424B228BA019600AADD4E /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		6F2424B628BA3B0100AADD4E /* EntityMockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMockDataProvider.swift; sourceTree = "<group>"; };
 		6F79C90528B77EDB001691EF /* CoreDataPreviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPreviews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F79C90828B77EDB001691EF /* CoreDataPreviewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPreviewsApp.swift; sourceTree = "<group>"; };
 		6F79C90C28B77EDB001691EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				6F2424A928B90FDB00AADD4E /* ShoppingList+CoreDataProperties.swift */,
 				6F2424AA28B90FDB00AADD4E /* ShoppingListItem+CoreDataClass.swift */,
 				6F2424AB28B90FDB00AADD4E /* ShoppingListItem+CoreDataProperties.swift */,
+				6F2424B628BA3B0100AADD4E /* EntityMockDataProvider.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				6F2424AE28B90FDB00AADD4E /* ShoppingListItem+CoreDataClass.swift in Sources */,
 				6F2424AF28B90FDB00AADD4E /* ShoppingListItem+CoreDataProperties.swift in Sources */,
 				6F2424B328BA019600AADD4E /* ItemView.swift in Sources */,
+				6F2424B728BA3B0100AADD4E /* EntityMockDataProvider.swift in Sources */,
 				6F2424AD28B90FDB00AADD4E /* ShoppingList+CoreDataProperties.swift in Sources */,
 				6F24248528B8FF3800AADD4E /* PersistenceManager.swift in Sources */,
 				6F79C90928B77EDB001691EF /* CoreDataPreviewsApp.swift in Sources */,
